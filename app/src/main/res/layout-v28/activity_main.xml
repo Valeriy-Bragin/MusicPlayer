@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/greenBackgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/green_background" />
+
+    <ImageView
+        android:id="@+id/whiteCircleImageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/greenMusicNoteImageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        app:srcCompat="@drawable/ic_baseline_music_note_38" />
+
+    <ImageView
+        android:id="@+id/whiteRectangleImageView"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/whiteCircleImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        app:srcCompat="@drawable/rectangle" />
+
+    <TextView
+        android:id="@+id/songNameImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whiteCircleImageView"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/my_song" />
+
+    <ImageView
+        android:id="@+id/volumeImageView"
+        android:layout_width="43dp"
+        android:layout_height="53dp"
+        android:layout_below="@+id/whiteRectangleImageView"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="18dp"
+        android:onClick="offOrReturnVolume"
+        app:srcCompat="@drawable/ic_baseline_volume_mute_24" />
+
+
+    <SeekBar
+        android:id="@+id/volumeSeekBar"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/whiteRectangleImageView"
+        android:layout_toEndOf="@+id/volumeImageView"
+        android:layout_marginTop="25dp"
+        android:scrollbarSize="100sp" />
+
+
+    <SeekBar
+        android:id="@+id/progressSeekBar"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/volumeSeekBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:scrollbarSize="100sp" />
+
+    <TextView
+        android:id="@+id/progressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_toStartOf="@+id/progressSeekBar"
+        android:layout_below="@+id/volumeSeekBar"
+        android:layout_marginTop="25dp" />
+
+
+
+    <ImageView
+        android:id="@+id/playOrPauseImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/progressSeekBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:onClick="playOrPause"
+        android:background="@drawable/circle"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+    <ImageView
+        android:id="@+id/skipPreviousImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/progressSeekBar"
+        android:layout_marginTop="50dp"
+        android:layout_toStartOf="@+id/playOrPauseImageView"
+        android:layout_marginEnd="35dp"
+        android:onClick="skipPrevious"
+        android:background="@drawable/circle"
+        app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+
+    <ImageView
+        android:id="@+id/skipNextImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/progressSeekBar"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@+id/playOrPauseImageView"
+        android:layout_marginStart="35dp"
+        android:onClick="skipNext"
+        android:background="@drawable/circle"
+        app:srcCompat="@drawable/ic_baseline_skip_next_24" />
+
+</RelativeLayout>
